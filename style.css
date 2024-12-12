@@ -1,0 +1,72 @@
+/*!Reseta as bordas dos navegadores*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*!Parte do fundo da web*/
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+/*!Barra de Navegação da web*/
+nav{
+    background-color: rgb(0, 0, 0);
+    justify-content: space-around;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+}
+
+/*!Parte do logo na barra de navegação*/
+.nav_logo{
+    display: flex;
+    transition: 1.0s;
+}
+.nav_logo:hover{
+    color: rgb(132, 0, 255);
+    transform: scale(1.2);
+}
+
+.nav_logo span{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.nav_logo h1{
+    letter-spacing: 7px;
+    font-size: 30px;
+}
+
+/*!Parte das Listas da barra de navegação*/
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    margin: 20px;
+    transition: 0.5s;
+}
+nav ul li:hover{
+    transform: scale(1.2);
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: rgb(132, 0, 255);
+}
+
+nav ul li span{
+    font-size: 18px;
+    margin-right: 10px;
+}
