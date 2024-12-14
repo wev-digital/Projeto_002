@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>Site de Carros</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <nav>
         <div class="nav_logo">
-            <span><ion-icon name="logo-github"></ion-icon></span>
-            <h1>Logo</h1>
+            <a href="/index.html">
+                <span><ion-icon name="logo-github"></ion-icon></span>
+                <h1>Logo</h1>
+            </a>
         </div>
         <ul class="nav_lista">
             <li><a href=""><span><ion-icon name="home-outline"></ion-icon></span><span>Home</span></a></li>
@@ -22,10 +26,18 @@
             <li><a href=""><span><ion-icon name="storefront-outline"></ion-icon></span><span>Loja</span></a></li>
             <li><a href=""><span><ion-icon name="person-circle-outline"></ion-icon></span><span>Contato</span></a></li>
         </ul>
-        <button onclick="menubar()" type="button">&#9776</button>
+        <button onclick="menubar()" type="button">&#9776;</button>
     </nav>
+    <main>
+        <div class="main_video">
+            <video class="video_inicial" autoplay muted playsinline>
+                <source src="https://media.porsche.com/mediakit/911-gt3-touring-package/videos/Striker_210607_GOP_Master_H264_02_1_kl.mp4" type="video/mp4">
+            </video>
+            <div class="content_video">
+                <button class="button_inicial" onclick="mutevideo()"><ion-icon id="muteIcon" name="volume-mute-outline"></ion-icon></button>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

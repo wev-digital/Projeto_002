@@ -1,12 +1,12 @@
 /*!Reseta as bordas dos navegadores*/
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 /*!Parte do fundo da web*/
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
@@ -14,7 +14,7 @@ body{
 }
 
 /*!Barra de Navegação da web*/
-nav{
+nav {
     background-color: rgb(0, 0, 0);
     justify-content: space-around;
     text-transform: uppercase;
@@ -25,86 +25,130 @@ nav{
 }
 
 /*!Parte do logo na barra de navegação*/
-.nav_logo{
+.nav_logo a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
     display: flex;
     transition: 1.0s;
 }
-.nav_logo:hover{
-    color: rgb(132, 0, 255);
+.nav_logo a:hover {
+    color: rgb(0, 255, 76);
     transform: scale(1.2);
 }
 
-.nav_logo span{
+.nav_logo span {
     font-size: 30px;
     margin-right: 20px;
 }
 
-.nav_logo h1{
+.nav_logo h1 {
     letter-spacing: 7px;
     font-size: 30px;
 }
 
 /*!Parte das Listas da barra de navegação*/
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
 }
 
-nav ul li{
-    margin: 20px;
+nav ul li {
+    margin: 10px;
     transition: 0.5s;
 }
-nav ul li:hover{
+nav ul li:hover {
     transform: scale(1.2);
 }
 
-nav ul li a{
+nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: 0.5s;
 }
-nav ul li a:hover{
-    color: rgb(132, 0, 255);
+nav ul li a:hover {
+    color: rgb(0, 255, 76);
 }
 
-nav ul li span{
+nav ul li span {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /*!Parte do botão mobile*/
-nav button{
+nav button {
     border-color: rgb(255, 255, 255);
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
+    cursor: pointer;
     font-size: 30px;
     display: none;
     width: 5vw;
 }
 
-/*TODO: Parte das configurações mobile da web*/
-@media (max-width: 720px) {
+/*TODO: Parte do conteúdo da página*/
+main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*!Parte de configuração do video*/
+.main_video {
+    position: relative;
+}
+
+.main_video video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*!Parte dos botões sobre o video*/
+.content_video {
+    position: absolute;
+    top: 80%;
+    right: 2%;
+}
+
+.content_video button {
+    border: solid 2px rgba(255, 255, 255, 0);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+/*TODO: Parte das configurações mobile da web*/ 
+@media (max-width: 900px) {
     /*!Parte das listas de opções*/
-    nav ul{
-        background-color: rgb(0, 0, 0);
+    nav ul {
+        background-color: rgba(0, 0, 0, 0.822);
         flex-direction: column;
         position: absolute;
         display: none;
-        width: 100vw;
-        height: auto;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
         top: 8%;
-        right: 0;
-    }
+        right: 0%;
+    } 
 
-    nav ul li:hover{
+    nav ul li{
+        margin-top: 20px;
+    }
+    nav ul li:hover {
         transform: scaleZ(1.2);
     }
 
+    nav ul li span {
+        font-size: 20px;
+    }
+
     /*!Parte do botão mobile*/
-    nav button{
+    nav button {
         display: block;
         width: 12vw;
         font-size: 25px;
     }
-
 }
