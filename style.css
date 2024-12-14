@@ -10,6 +10,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 /*!Barra de Navegação da web*/
@@ -67,6 +68,43 @@ nav ul li a:hover{
 }
 
 nav ul li span{
-    font-size: 18px;
     margin-right: 10px;
+    font-size: 18px;
+}
+
+/*!Parte do botão mobile*/
+nav button{
+    border-color: rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: none;
+    width: 5vw;
+}
+
+/*TODO: Parte das configurações mobile da web*/
+@media (max-width: 720px) {
+    /*!Parte das listas de opções*/
+    nav ul{
+        background-color: rgb(0, 0, 0);
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        width: 100vw;
+        height: auto;
+        top: 8%;
+        right: 0;
+    }
+
+    nav ul li:hover{
+        transform: scaleZ(1.2);
+    }
+
+    /*!Parte do botão mobile*/
+    nav button{
+        display: block;
+        width: 12vw;
+        font-size: 25px;
+    }
+
 }
