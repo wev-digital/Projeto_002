@@ -37,13 +37,13 @@ nav {
 }
 
 .nav_logo span {
-    font-size: 30px;
+    font-size: 35px;
     margin-right: 20px;
 }
 
 .nav_logo h1 {
-    letter-spacing: 7px;
-    font-size: 30px;
+    letter-spacing: 7px; 
+    font-size: 35px;
 }
 
 /*!Parte das Listas da barra de navegação*/
@@ -76,11 +76,11 @@ nav ul li span {
 
 /*!Parte do botão mobile*/
 nav button {
-    border-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0);
+    border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     cursor: pointer;
-    font-size: 30px;
+    font-size: 100px;
     display: none;
     width: 5vw;
 }
@@ -92,11 +92,11 @@ main {
     display: flex;
 }
 
-/*!Parte de configuração do video*/
-.main_video {
-    position: relative;
+main div{
+    display: inline-block;
 }
 
+/*!Parte de configuração do video*/
 .main_video video {
     object-fit: cover;
     width: 100vw;
@@ -106,12 +106,12 @@ main {
 /*!Parte dos botões sobre o video*/
 .content_video {
     position: absolute;
-    top: 80%;
+    top: 90%;
     right: 2%;
 }
 
 .content_video button {
-    border: solid 2px rgba(255, 255, 255, 0);
+    border: solid 2px transparent;
     background-color: transparent;
     color: rgb(255, 255, 255);
     border-radius: 100px;
@@ -149,6 +149,6 @@ main {
     nav button {
         display: block;
         width: 12vw;
-        font-size: 25px;
+        font-size: 30px;
     }
 }
